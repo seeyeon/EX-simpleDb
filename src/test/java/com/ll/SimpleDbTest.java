@@ -1,9 +1,7 @@
 package com.ll;
 
 import com.ll.SimpleDb.SimpleDb;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.MethodOrderer;
-import org.junit.jupiter.api.TestMethodOrder;
+import org.junit.jupiter.api.*;
 
 @TestMethodOrder(MethodOrderer.MethodName.class)
 public class SimpleDbTest {
@@ -14,7 +12,7 @@ public class SimpleDbTest {
     public static void beforeAll() {
 
 
-        simpleDb = new SimpleDb("localhost", "root", "lldj123414", "simpleDb__test");
+        simpleDb = new SimpleDb("localhost", "root", "dev1004", "simpleDb__test");
 
         createArticleTable();
     }
@@ -33,5 +31,11 @@ public class SimpleDbTest {
                     isBlind BIT(1) NOT NULL DEFAULT 0
                 )
                 """);
+    }
+
+    @Test
+    @DisplayName("데이터베이스 연결 테스트")
+    public void t00() {
+
     }
 }
