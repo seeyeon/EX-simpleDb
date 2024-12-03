@@ -10,4 +10,6 @@ public class SimpleDb {
     private final String pwd;
     private final String dbName;
 
+    public void run(String sql) {
+    }
 }

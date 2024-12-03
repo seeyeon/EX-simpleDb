@@ -8,9 +8,11 @@ import org.junit.jupiter.api.TestMethodOrder;
 @TestMethodOrder(MethodOrderer.MethodName.class)
 public class SimpleDbTest {
 
+    private static SimpleDb simpleDb;
+
     @BeforeAll
     public static void beforeAll() {
-        private static SimpleDb simpleDb;
+
 
         simpleDb = new SimpleDb("localhost", "root", "lldj123414", "simpleDb__test");
 
